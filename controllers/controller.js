@@ -1,6 +1,8 @@
+const dotenv = require('dotenv');
+dotenv.config();
 const express = require('express');
 const Contact = require('../models/model');
-const Stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 // Clé SECRÈTE Stripe (mode test)
 
